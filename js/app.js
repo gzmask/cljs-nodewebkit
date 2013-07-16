@@ -17133,11 +17133,11 @@ cljs.core.tree_map_append = function tree_map_append(left, right) {
     }else {
       if(left instanceof cljs.core.RedNode) {
         if(right instanceof cljs.core.RedNode) {
-          var app = tree_map_append.call(null, left.right, right.left);
-          if(app instanceof cljs.core.RedNode) {
-            return new cljs.core.RedNode(app.key, app.val, new cljs.core.RedNode(left.key, left.val, left.left, app.left, null), new cljs.core.RedNode(right.key, right.val, app.right, right.right, null), null)
+          var app__$1 = tree_map_append.call(null, left.right, right.left);
+          if(app__$1 instanceof cljs.core.RedNode) {
+            return new cljs.core.RedNode(app__$1.key, app__$1.val, new cljs.core.RedNode(left.key, left.val, left.left, app__$1.left, null), new cljs.core.RedNode(right.key, right.val, app__$1.right, right.right, null), null)
           }else {
-            return new cljs.core.RedNode(left.key, left.val, left.left, new cljs.core.RedNode(right.key, right.val, app, right.right, null), null)
+            return new cljs.core.RedNode(left.key, left.val, left.left, new cljs.core.RedNode(right.key, right.val, app__$1, right.right, null), null)
           }
         }else {
           return new cljs.core.RedNode(left.key, left.val, left.left, tree_map_append.call(null, left.right, right), null)
@@ -17147,11 +17147,11 @@ cljs.core.tree_map_append = function tree_map_append(left, right) {
           return new cljs.core.RedNode(right.key, right.val, tree_map_append.call(null, left, right.left), right.right, null)
         }else {
           if("\ufdd0:else") {
-            var app = tree_map_append.call(null, left.right, right.left);
-            if(app instanceof cljs.core.RedNode) {
-              return new cljs.core.RedNode(app.key, app.val, new cljs.core.BlackNode(left.key, left.val, left.left, app.left, null), new cljs.core.BlackNode(right.key, right.val, app.right, right.right, null), null)
+            var app__$1 = tree_map_append.call(null, left.right, right.left);
+            if(app__$1 instanceof cljs.core.RedNode) {
+              return new cljs.core.RedNode(app__$1.key, app__$1.val, new cljs.core.BlackNode(left.key, left.val, left.left, app__$1.left, null), new cljs.core.BlackNode(right.key, right.val, app__$1.right, right.right, null), null)
             }else {
-              return cljs.core.balance_left_del.call(null, left.key, left.val, left.left, new cljs.core.BlackNode(right.key, right.val, app, right.right, null))
+              return cljs.core.balance_left_del.call(null, left.key, left.val, left.left, new cljs.core.BlackNode(right.key, right.val, app__$1, right.right, null))
             }
           }else {
             return null
@@ -21790,7 +21790,7 @@ node_webkit.core.tray_BANG_ = function tray_BANG_(options) {
 node_webkit.core.update_tray = function update_tray(option, value) {
   return node_webkit.core.current_tray[cljs.core.name.call(null, option)] = value
 };
-goog.provide("nwcljs.core");
+goog.provide("app.core");
 goog.require("cljs.core");
 goog.require("node_webkit.core");
 node_webkit.core.tray_BANG_.call(null, cljs.core.PersistentArrayMap.fromArray(["\ufdd0:title", "My App", "\ufdd0:icon", "img/icon.png", "\ufdd0:menu", node_webkit.core.menu.call(null, cljs.core.PersistentVector.fromArray([cljs.core.PersistentArrayMap.fromArray(["\ufdd0:label", "Show...", "\ufdd0:click", function() {
