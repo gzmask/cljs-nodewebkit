@@ -17,6 +17,6 @@
 
 (defn start []
   (ef/at js/document
-         ["body"] (ef/content "Hello world!")))
+         ["#container"] (ef/content "Hello world!")))
 
 (start)

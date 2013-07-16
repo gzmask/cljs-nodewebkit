@@ -33127,6 +33127,6 @@ window.onload = function() {
   return a.innerHTML = "maomao"
 }();
 app.core.start = function start() {
-  return enfocus.core.at.call(null, document, cljs.core.PersistentVector.fromArray(["body"], true), enfocus.core.content.call(null, "Hello world!"))
+  return enfocus.core.at.call(null, document, cljs.core.PersistentVector.fromArray(["#container"], true), enfocus.core.content.call(null, "Hello world!"))
 };
 app.core.start.call(null);
